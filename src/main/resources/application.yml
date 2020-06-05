@@ -1,0 +1,36 @@
+server:
+ port: 8080
+spring:
+ application:
+  name: authrization-application
+ redis:
+  database: 0
+  host: ******
+  port: ******
+  password: ******
+  jedis:
+   pool:
+    max-active: 20
+    max-idle: 10
+    max-wait: 200
+    min-idle: 10
+  time-out: 3000
+ jpa:
+  hibernate: 
+   ddl-auto: update
+  show-sql: true
+ datasource: 
+  url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=UTF-8&generateSimpleParameterMetadata=true&serverTimezone=Asia/Shanghai
+  driver-class-name: com.mysql.cj.jdbc.Driver
+  username: ******
+  password: ******
+ thymeleaf:
+  mode: HTML5
+  encoding: UTF-8
+  contentType: text/html
+  cache: false
+  prefix: classpath:/templates
+logging:
+ level:
+  com.lysstudy: debug
+  org.springframework: debug
